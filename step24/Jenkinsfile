@@ -39,7 +39,6 @@ pipeline {
                 sh "kubectl apply -f ./${STEP_NUM}/deploy/k8s/green/deployment.yaml"
             }
         }
-
         stage('Green 배포 확인중') {
             steps {
                 script {
