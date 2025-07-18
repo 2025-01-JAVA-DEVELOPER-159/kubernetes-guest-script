@@ -1,9 +1,14 @@
 pipeline {
     agent any
-
+    parameters {
+        // DockerHub 사용자명 입력
+        string(name: 'DOCKERHUB_USERNAME',  defaultValue: 'academyitwill', description: 'DockerHub 사용자명을 입력하세요.')
+        // GitHub  사용자명 입력
+        string(name: 'GITHUB_USERNAME',  defaultValue: '2025-01-JAVA-DEVELOPER-159', description: 'GitHub  사용자명을 입력하세요.')
+    }			
     environment {
         // 본인의 username으로 하실 분은 수정해주세요.
-        GITHUB_URL = 'https://github.com/2024-07-JAVA-DEVELOPER-155/kubernetes-guest-script.git'
+        GITHUB_URL = 'https://github.com/2025-01-JAVA-DEVELOPER-159/kubernetes-guest-script.git'
         // 실습 넘버링
          STEP_NUM = 'step23'
     }
